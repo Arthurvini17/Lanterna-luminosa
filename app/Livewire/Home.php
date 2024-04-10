@@ -13,11 +13,17 @@ class Home extends Component
 
     public $isOpen = false;
 
-    public function abrirView(){
+    public $isImageChanged = false;
+
+
+    public function abrirView()
+    {
         $this->isOpen = true;
+        $this->isImageChanged = !$this->isImageChanged;
     }
 
-    public function fecharView(){
+    public function fecharView()
+    {
         $this->isOpen = false;
     }
 }

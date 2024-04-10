@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="bg-green-700 drop-shadow-xl p-4">
+    <header class="bg-slate-800 drop-shadow-xl p-4">
         <nav class="flex justify-between items-center">
             <div>
                 <p>Instituto Lanterna Luminosa</p>
