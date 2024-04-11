@@ -10,7 +10,7 @@
             </div>
 
             <div class="flex items-center text-start   font-poppins text-xl color text-slate-600">
-                <div class="">
+                <div class="indent-9">
                     <p>O Instituto Lanterna Luminosa é uma Associação Civil de Terceiro Setor dedicada ao combate do abuso
                         contra
                         mulheres e seus filhos. Nosso compromisso é amplo, abrangendo desde a prevenção de todos os tipos de
@@ -127,38 +127,124 @@
                 <img class="" src="{{ asset('image/dataphoto2.webp') }}" alt="">
             </div>
 
-            <div class="flex items-center justify-center flex-col p-20 bg-slate-200">
+            <div class="flex items-center justify-center flex-col p-20 ">
                 <div class="p-20 text-center">
                     <h1 class="text-2xl">Contribua com a nossa vaquinha</h1>
-                    <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, ipsa unde magnam explicabo quis enim quia iusto odit ad vel nam quasi a hic sed laboriosam libero delectus consequuntur itaque!</p>
+                    <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, ipsa unde magnam
+                        explicabo quis enim quia iusto odit ad vel nam quasi a hic sed laboriosam libero delectus
+                        consequuntur itaque!</p>
                 </div>
 
                 <div>
-                    <button class="bg-black     text-orange-200  w-full h-full p-5  rounded-lg hover:text-white ease-in duration-300 hover:scale-110">Acesse clicando aqui</button>
+                    <button
+                        class="bg-black     text-orange-200  w-full h-full p-5  rounded-lg hover:text-white ease-in duration-300 hover:scale-110">Acesse
+                        clicando aqui</button>
                 </div>
             </div>
-
-            <div>
-                @if ($isOpen)
-                    <div class=" fixed top-20  right-10 " wire:transition>
-                        @include('livewire.modal')
-                    </div>
-                @endif
-
-                @if ($isImageChanged)
-                    <button wire:click='abrirView'
-                        class="fixed bottom-4 right-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        <p>Fechar</p>
-                    </button>
-                @else
-                    <button wire:click='abrirView'
-                        class="fixed bottom-4 right-4 bg-blue-500 hover:bg-blue-700  rounded-2xl text-white font-bold py-2 px-4 ">
-                        <img class="w-10 h-10 rounded-lg" src="{{ asset('image/balao-de-fala-com-linhas-de-texto.png') }}"
-                            alt="">
-                    </button>
-                @endif
-            </div>
-
-            @livewireScripts
         </div>
-    @endsection
+
+        <div class="p-10">
+            <div class="flex justify-center text-2xl font-normal ">
+                <h1>Depoimentos</h1>
+            </div>
+            <div class="flex  justify-center    gap-48  ">
+
+                <div class=" w-[32rem] h-[32rem] p-10   shadow-2xl  text-2xl bg-slate-50">
+                    <p>Ele quebrou meu braço, fui parar no hospital. Depois, abrigada na casa de parentes, busquei
+                        ajuda. Elas me acompanharam e deram todo o apoio, amenizando as minhas dores até nos dias em que
+                        sinto que nem quero mais viver. Esse trabalho significou muito pra mim e, com certeza, está
+                        ajudando muitas mulheres.</p>
+
+                    <div class="flex items-center justify-center gap-2  ">
+                        <img class="w-10" src="{{ asset('image/dataphoto2.webp') }}" alt="">
+                        <p class="text-sm font-semibold">
+                            Ana Clara Anjos <br>
+                            <span class=" font-light">Vítima de abuso.</span>
+                        </p>
+                    </div>
+
+
+                </div>
+
+                <div class=" w-[32rem] h-[32rem] p-10   shadow-2xl  text-2xl bg-slate-50">
+                    <p>Descobri o horror de ser violentada, oprimida e deprimida. Me senti impotente! Durante o
+                        acolhimento, elas me ouviram, me defenderam em todas as audiências e estiveram comigo até o fim
+                        do
+                        processo porque são mulheres que entendem outras mulheres, sabem das nossas dores e lutam pelos
+                        mesmos ideias que os nossos.</p>
+                    <div class="flex items-center justify-center gap-2  ">
+                        <img class="w-10" src="{{ asset('image/dataphoto2.webp') }}" alt="">
+                        <p class="text-sm font-semibold">
+                            Ana Clara Anjos <br>
+                            <span class=" font-light">Vítima de abuso.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-[32rem] h-[32rem] p-10   shadow-2xl  text-2xl bg-slate-50  ">
+                    <p>Tinha acabado de sofrer abusos e maus tratos do meu ex-parceiro. Sem dinheiro para pagar
+                        advogados, fui apresentada a elas por uma pessoa do Ministério Público. Eu serei eternamente
+                        grata a todo o grupo por tudo o que fizeram e fazem por mim e por todas as mulheres que passam
+                        por momentos tão humilhantes, difíceis e cruéis nessa sociedade machista.</p>
+
+                    <div class="flex items-center  justify-center gap-2   ">
+                        <img class="w-10" src="{{ asset('image/dataphoto2.webp') }}" alt="">
+                        <p class="text-sm font-semibold">
+                            Ana Clara Anjos <br>
+                            <span class=" font-light">Vítima de abuso.</span>
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="flex items-center justify-center flex-col  p-10 gap-4">
+            <div>
+                <h1 class="text-4xl">Perguntas Frequentes</h1>
+            </div>
+            <div>
+                <div x-data="{ open: false }">
+                    <button class="bg-slate-800 rounded-md text-orange-400 p-[1rem] w-[30rem]  text-xl text-start " @click="open = ! open"> Onde o
+                        instituto se localiza </button>
+                    <div class="text-center justify-center flex" x-show="open" x-transition ">
+                                <p>Nossa ONG atualmente atua no Brasil todo.</p>
+                            </div>
+                        </div>
+                </div>
+
+                <div>
+                    <div x-data="{ open: false }">
+                        <button class="bg-slate-800 rounded-md text-orange-400 p-[1rem] w-[30rem]  text-xl text-start " @click="open = ! open"> Como faço para me voluntariar? </button>
+                        <div class="text-center justify-center flex" x-show="open" x-transition ">
+                        <p>Disponibilizamos um formulário no topo do site para entrar em contato, também temos nossas redes sociais..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            @if ($isOpen)
+                <div class=" fixed top-20  right-10 " wire:transition>
+                    @include('livewire.modal')
+                </div>
+            @endif
+
+            @if ($isImageChanged)
+                <button wire:click='abrirView'
+                    class="fixed bottom-4 right-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <p>Fechar</p>
+                </button>
+            @else
+                <button wire:click='abrirView'
+                    class="fixed bottom-4 right-4 bg-blue-500 hover:bg-blue-700  rounded-2xl text-white font-bold py-2 px-4 ">
+                    <img class="w-10 h-10 rounded-lg" src="{{ asset('image/balao-de-fala-com-linhas-de-texto.png') }}"
+                        alt="">
+                </button>
+            @endif
+        </div>
+
+        @livewireScripts
+    </div>
+@endsection
