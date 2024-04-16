@@ -156,7 +156,7 @@
                         ajudando muitas mulheres.</p>
 
                     <div class="flex items-center justify-center gap-2  ">
-                        <img class="w-10" src="{{ asset('image/dataphoto2.webp') }}" alt="">
+                        <img class="w-10 rounded-tl-3xl rounded-bl-xl" src="{{ asset('image/user1.webp') }}" alt="">
                         <p class="text-sm font-semibold">
                             Ana Clara Anjos <br>
                             <span class=" font-light">Vítima de abuso.</span>
@@ -173,7 +173,7 @@
                         processo porque são mulheres que entendem outras mulheres, sabem das nossas dores e lutam pelos
                         mesmos ideias que os nossos.</p>
                     <div class="flex items-center justify-center gap-2  ">
-                        <img class="w-10" src="{{ asset('image/dataphoto2.webp') }}" alt="">
+                        <img class="w-10 rounded-tl-3xl rounded-bl-xl" src="{{ asset('image/user1.webp') }}" alt="">
                         <p class="text-sm font-semibold">
                             Ana Clara Anjos <br>
                             <span class=" font-light">Vítima de abuso.</span>
@@ -188,7 +188,8 @@
                         por momentos tão humilhantes, difíceis e cruéis nessa sociedade machista.</p>
 
                     <div class="flex items-center  justify-center gap-2   ">
-                        <img class="w-10" src="{{ asset('image/dataphoto2.webp') }}" alt="">
+                        <img class="w-10   rounded-tl-3xl rounded-bl-xl" src="{{ asset('image/user1.webp') }}"
+                            alt="">
                         <p class="text-sm font-semibold">
                             Ana Clara Anjos <br>
                             <span class=" font-light">Vítima de abuso.</span>
@@ -207,22 +208,44 @@
             </div>
             <div>
                 <div x-data="{ open: false }">
-                    <button class="bg-slate-800 rounded-md text-orange-400 p-[1rem] w-[30rem]  text-xl text-start " @click="open = ! open"> Onde o
+                    <button class="bg-slate-800 rounded-md text-orange-400 p-[1rem] w-[30rem]  text-xl text-start "
+                        @click="open = ! open"> Onde o
                         instituto se localiza </button>
                     <div class="text-center justify-center flex" x-show="open" x-transition ">
-                                <p>Nossa ONG atualmente atua no Brasil todo.</p>
+                                            <p>Nossa ONG atualmente atua no Brasil todo.</p>
+                                        </div>
+                                    </div>
                             </div>
-                        </div>
-                </div>
 
-                <div>
-                    <div x-data="{ open: false }">
-                        <button class="bg-slate-800 rounded-md text-orange-400 p-[1rem] w-[30rem]  text-xl text-start " @click="open = ! open"> Como faço para me voluntariar? </button>
-                        <div class="text-center justify-center flex" x-show="open" x-transition ">
-                        <p>Disponibilizamos um formulário no topo do site para entrar em contato, também temos nossas redes sociais..</p>
+                            <div>
+                                <div x-data="{ open: false }">
+                                    <button class="bg-slate-800 rounded-md text-orange-400 p-[1rem] w-[30rem]  text-xl text-start " @click="open = ! open"> Como faço para me voluntariar? </button>
+                                    <div class="text-center justify-center flex" x-show="open" x-transition ">
+                        <p>Disponibilizamos um formulário no topo do site para entrar em contato, também temos nossas redes
+                            sociais..</p>
                     </div>
                 </div>
             </div>
+        </div>
+
+
+        <div class=" flex items-center justify-center p-10 ">
+            <div class=" bg-slate-800 w-[50rem]  flex p-10 gap-2 rounded-xl ">
+                <div class="">
+                    <h1 class="text-white text-3xl">Ainda restou dúvidas? Chame a gente!</h1>
+                    <p class="text-white">Dê voz às mulheres: traga nossa palestra para sua comunidade ou empresa. Entre em contato conosco
+                        pelo
+                        e-mail:</p>
+                    <p class=" text-yellow-300">institutolanternaluminosa@gmail.comOu contate a presidente pelo WhatsApp:+55 (41) 9164-1633
+                        (Emanoelli)
+                    </p>
+                    <h3 class=" text-yellow-500">Não deixe para depois!</h3>
+                </div>
+
+                <button class="rounded-md mt-10 bg-white w-[10rem] h-full p-3">Contate-nos</button>
+            </div>
+
+            
         </div>
         <div>
             @if ($isOpen)

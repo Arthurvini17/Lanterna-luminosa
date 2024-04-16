@@ -20,6 +20,9 @@
             <div class="flex items-center gap-1">
                 <p>Sobre o Instituto</p>
                 <button class="m-3 rounded-xl bg-yellow-400 p-3">Buscar ajuda</button>
+                <a href="{{route('register.index')}}">
+                    <button>Criar Conta</button>
+                </a>
             </div>
         </nav>
     </header>
