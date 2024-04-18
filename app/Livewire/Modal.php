@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Helper;
 use Livewire\Component;
 
 class Modal extends Component
@@ -11,5 +12,9 @@ class Modal extends Component
         return view('livewire.modal');
     }
 
- 
+
+   
+
+   
+
 }
