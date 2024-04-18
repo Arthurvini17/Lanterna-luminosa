@@ -8,12 +8,11 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Document</title>
 </head>
-@livewireStyles
 
 <body>
         @livewire('home')
    
-    @livewireScripts
 </body>
+@livewireScripts
 
 </html>

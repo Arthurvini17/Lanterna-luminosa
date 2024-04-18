@@ -12,17 +12,29 @@
 
 <body>
     <header class="bg-slate-800 drop-shadow-xl p-4">
-        <nav class="flex justify-between items-center">
-            <div>
+        <nav class="flex justify-between ">
+            <div class="items-center flex gap-3">
                 <p>Instituto Lanterna Luminosa</p>
+                <div>
+                    @auth
+                        <p class="text-yellow-300"> Olá,{{ Auth::user()->name }} </p>
+                    @endauth
+
+                    @guest
+                        <p>Você não esta logado</p>
+                    @endguest
+                </div>
+
             </div>
 
             <div class="flex items-center gap-1">
                 <p>Sobre o Instituto</p>
                 <button class="m-3 rounded-xl bg-yellow-400 p-3">Buscar ajuda</button>
-                <a href="{{route('register.index')}}">
+                <a href="{{ route('register.index') }}">
                     <button>Criar Conta</button>
                 </a>
+
+                <a href="{{route('logout')}}">Sair</a>
             </div>
         </nav>
     </header>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
@@ -35,5 +37,35 @@ class UserController extends Controller
         ]);
 
         return redirect('/')->with('success', 'registro feito');
+    }
+
+
+    public function login_index(){
+        return view('auth.login');
+    }
+
+    public function authenticate (Request $request) {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+
+        $remember = $request->filled('remember');
+
+        if(Auth::attempt($credentials, $remember)){
+            $request->session()->regenerate();
+
+            return redirect()->route('index.home');
+        }
+    }
+
+
+    public function logout()
+    {
+        Session::flush();
+        
+        Auth::logout();
+
+        return redirect('login');
     }
 }

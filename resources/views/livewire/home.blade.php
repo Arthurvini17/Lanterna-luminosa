@@ -1,5 +1,4 @@
 <div>
-    @livewireStyles
 
     @extends('layouts.layout')
     @section('title', 'Home')
@@ -268,6 +267,6 @@
             @endif
         </div>
 
-        @livewireScripts
     </div>
+
 @endsection
